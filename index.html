@@ -17,6 +17,14 @@
 <ul>
 <li><a href="#chapitre-1--introduction-à-javascript">Chapitre 1 : Introduction à JavaScript</a></li>
 <li><a href="#chapitre-2--les-bases-de-javascript">Chapitre 2 : Les bases de JavaScript</a></li>
+<li><a href="#chapitre-3--les-conditions">Chapitre 3 : Les conditions</a></li>
+<li><a href="#chapitre-4--les-boucles">Chapitre 4 : Les boucles</a></li>
+<li><a href="#chapitre-5--les-fonctions">Chapitre 5 : Les fonctions</a></li>
+<li><a href="#chapitre-6--manipulation-du-dom">Chapitre 6 : Manipulation du DOM</a></li>
+<li><a href="#chapitre-7--les-tableaux-arrays">Chapitre 7 : Les tableaux (Arrays)</a></li>
+<li><a href="#chapitre-8--les-objets">Chapitre 8 : Les objets</a></li>
+<li><a href="#chapitre-9--les-événements">Chapitre 9 : Les événements</a></li>
+<li><a href="#chapitre-10--exercice-global">Chapitre 10 : Exercice global</a></li>
 </ul>
 </li>
 </ul>
@@ -191,6 +199,394 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <li>Déclarez deux variables  <code>x</code>  et  <code>y</code>  avec des valeurs numériques.</li>
 <li>Calculez leur somme, différence, produit, et quotient.</li>
 <li>Affichez les résultats dans la console.</li>
+</ol>
+<h2 id="chapitre-3--les-conditions"><strong>Chapitre 3 : Les conditions</strong></h2>
+<h3 id="les-structures-conditionnelles"><strong>3.1 Les structures conditionnelles</strong></h3>
+<h4 id="théorie--5">Théorie :</h4>
+<ul>
+<li>Les  <strong>conditions</strong>  permettent d’exécuter du code en fonction d’une situation.</li>
+<li>La structure de base est la suivante :</li>
+</ul>
+<pre class=" language-js"><code class="prism  language-js"><span class="token keyword">if</span> <span class="token punctuation">(</span>condition<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Code à exécuter si la condition est vraie</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Code à exécuter si la condition est fausse</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h4 id="exemple--5">Exemple :</h4>
+<pre class=" language-js"><code class="prism  language-js"><span class="token keyword">let</span> age <span class="token operator">=</span> <span class="token number">18</span><span class="token punctuation">;</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span>age <span class="token operator">&gt;=</span> <span class="token number">18</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Vous êtes majeur."</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// S'exécute si la condition est vraie</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Vous êtes mineur."</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// S'exécute si la condition est fausse</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h4 id="explications-"><strong>Explications :</strong></h4>
+<ol>
+<li><strong><code>if (age &gt;= 18)</code></strong>  : Vérifie si la variable  <code>age</code>  est supérieure ou égale à 18.</li>
+<li>Si la condition est vraie, le code dans les accolades  <code>{}</code>  après  <code>if</code>  est exécuté.</li>
+<li>Sinon, le code dans les accolades après  <code>else</code>  est exécuté.</li>
+</ol>
+<h3 id="les-conditions-multiples"><strong>3.2 Les conditions multiples</strong></h3>
+<h4 id="théorie--6">Théorie :</h4>
+<ul>
+<li>Pour tester plusieurs conditions, on peut utiliser  <code>else if</code>  :</li>
+</ul>
+<pre class=" language-js"><code class="prism  language-js"><span class="token keyword">if</span> <span class="token punctuation">(</span>condition1<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Code si condition1 est vraie</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>condition2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Code si condition2 est vraie</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Code si aucune condition n'est vraie</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h4 id="exemple--6">Exemple :</h4>
+<pre class=" language-js"><code class="prism  language-js"><span class="token keyword">let</span> heure <span class="token operator">=</span> <span class="token number">14</span><span class="token punctuation">;</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span>heure <span class="token operator">&lt;</span> <span class="token number">12</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Bonjour !"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>heure <span class="token operator">&lt;</span> <span class="token number">18</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Bon après-midi !"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Bonsoir !"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h4 id="exercice-pratique--5"><strong>Exercice pratique :</strong></h4>
+<ol>
+<li>Déclarez une variable  <code>note</code>  (entre 0 et 20).</li>
+<li>Écrivez un programme qui affiche :
+<ul>
+<li>“Très bien” si la note est supérieure ou égale à 16.</li>
+<li>“Bien” si la note est entre 12 et 15 inclus.</li>
+<li>“Passable” si la note est entre 10 et 11 inclus.</li>
+<li>“Échec” si la note est inférieure à 10.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="chapitre-4--les-boucles"><strong>Chapitre 4 : Les boucles</strong></h2>
+<h3 id="la-boucle--for"><strong>4.1 La boucle  <code>for</code></strong></h3>
+<h4 id="théorie--7">Théorie :</h4>
+<ul>
+<li>Une boucle permet de répéter une action plusieurs fois.</li>
+<li>La boucle  <code>for</code>  a la structure suivante :</li>
+</ul>
+<pre class=" language-js"><code class="prism  language-js"><span class="token keyword">for</span> <span class="token punctuation">(</span>initialisation<span class="token punctuation">;</span> condition<span class="token punctuation">;</span> incrément<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Code à répéter</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<ul>
+<li><strong>Initialisation</strong>  : Déclare une variable pour démarrer la boucle.</li>
+<li><strong>Condition</strong>  : Vérifie si la boucle doit continuer.</li>
+<li><strong>Incrément</strong>  : Modifie la variable après chaque itération.</li>
+</ul>
+<h4 id="exemple--7">Exemple :</h4>
+<pre class=" language-js"><code class="prism  language-js"><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">5</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Itération :"</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Affiche les nombres de 1 à 5</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h4 id="explications--1"><strong>Explications :</strong></h4>
+<ol>
+<li><strong><code>let i = 1</code></strong>  : Initialise la variable  <code>i</code>  à 1.</li>
+<li><strong><code>i &lt;= 5</code></strong>  : Continue la boucle tant que  <code>i</code>  est inférieur ou égal à 5.</li>
+<li><strong><code>i++</code></strong>  : Incrémente  <code>i</code>  de 1 après chaque itération.</li>
+</ol>
+<hr>
+<h3 id="la-boucle--while"><strong>4.2 La boucle  <code>while</code></strong></h3>
+<h4 id="théorie--8">Théorie :</h4>
+<ul>
+<li>La boucle  <code>while</code>  répète une action tant qu’une condition est vraie.</li>
+</ul>
+<pre class=" language-js"><code class="prism  language-js"><span class="token keyword">while</span> <span class="token punctuation">(</span>condition<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Code à répéter</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h4 id="exemple--8">Exemple :</h4>
+<pre class=" language-js"><code class="prism  language-js"><span class="token keyword">let</span> compteur <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+
+<span class="token keyword">while</span> <span class="token punctuation">(</span>compteur <span class="token operator">&lt;=</span> <span class="token number">5</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Compteur :"</span><span class="token punctuation">,</span> compteur<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Affiche les nombres de 1 à 5</span>
+    compteur<span class="token operator">++</span><span class="token punctuation">;</span> <span class="token comment">// Incrémente la variable</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h4 id="exercice-pratique--6"><strong>Exercice pratique :</strong></h4>
+<ol>
+<li>Écrivez une boucle  <code>for</code>  qui affiche les nombres de 1 à 10.</li>
+<li>Écrivez une boucle  <code>while</code>  qui affiche uniquement les nombres pairs entre 1 et 10.</li>
+</ol>
+<hr>
+<h2 id="chapitre-5--les-fonctions"><strong>Chapitre 5 : Les fonctions</strong></h2>
+<h3 id="définir-une-fonction"><strong>5.1 Définir une fonction</strong></h3>
+<h4 id="théorie--9">Théorie :</h4>
+<ul>
+<li>Une  <strong>fonction</strong>  est un bloc de code réutilisable.</li>
+<li>Elle peut prendre des  <strong>paramètres</strong>  et retourner un  <strong>résultat</strong>.</li>
+</ul>
+<pre class=" language-js"><code class="prism  language-js"><span class="token keyword">function</span> <span class="token function">nomDeLaFonction</span><span class="token punctuation">(</span>param1<span class="token punctuation">,</span> param2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Code</span>
+    <span class="token keyword">return</span> resultat<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h4 id="exemple--9">Exemple :</h4>
+<pre class=" language-js"><code class="prism  language-js"><span class="token keyword">function</span> <span class="token function">addition</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span> <span class="token comment">// Retourne la somme de a et b</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> resultat <span class="token operator">=</span> <span class="token function">addition</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Appelle la fonction avec 3 et 7</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Résultat :"</span><span class="token punctuation">,</span> resultat<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Affiche 10</span>
+</code></pre>
+<h4 id="explications--2"><strong>Explications :</strong></h4>
+<ol>
+<li><strong><code>function addition(a, b)</code></strong>  : Définit une fonction nommée  <code>addition</code>  avec deux paramètres  <code>a</code>  et  <code>b</code>.</li>
+<li><strong><code>return a + b</code></strong>  : Retourne la somme des deux paramètres.</li>
+<li><strong><code>addition(3, 7)</code></strong>  : Appelle la fonction avec les valeurs 3 et 7.</li>
+</ol>
+<hr>
+<h3 id="les-fonctions-anonymes-et-fléchées"><strong>5.2 Les fonctions anonymes et fléchées</strong></h3>
+<h4 id="théorie--10">Théorie :</h4>
+<ul>
+<li>Une  <strong>fonction anonyme</strong>  est une fonction sans nom.</li>
+<li>Une  <strong>fonction fléchée</strong>  est une version simplifiée des fonctions anonymes.</li>
+</ul>
+<h4 id="exemple--10">Exemple :</h4>
+<pre class=" language-js"><code class="prism  language-js"><span class="token comment">// Fonction anonyme</span>
+<span class="token keyword">let</span> <span class="token function-variable function">multiplier</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> x <span class="token operator">*</span> y<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Fonction fléchée</span>
+<span class="token keyword">let</span> <span class="token function-variable function">multiplierFleche</span> <span class="token operator">=</span> <span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> x <span class="token operator">*</span> y<span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">multiplier</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Affiche 12</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">multiplierFleche</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Affiche 12</span>
+</code></pre>
+<h4 id="exercice-pratique--7"><strong>Exercice pratique :</strong></h4>
+<ol>
+<li>Créez une fonction nommée  <code>saluer</code>  qui prend un paramètre  <code>nom</code>  et affiche “Bonjour, [nom] !”.</li>
+<li>Créez une fonction fléchée qui calcule le carré d’un nombre.</li>
+</ol>
+<hr>
+<h2 id="chapitre-6--manipulation-du-dom"><strong>Chapitre 6 : Manipulation du DOM</strong></h2>
+<h3 id="sélectionner-et-modifier-des-éléments"><strong>6.1 Sélectionner et modifier des éléments</strong></h3>
+<h4 id="théorie--11">Théorie :</h4>
+<ul>
+<li>Le  <strong>DOM (Document Object Model)</strong>  représente la structure HTML sous forme d’objet.</li>
+<li>Avec JavaScript, vous pouvez :
+<ul>
+<li>Sélectionner des éléments HTML.</li>
+<li>Modifier leur contenu ou leur style.</li>
+</ul>
+</li>
+</ul>
+<h4 id="exemple--11">Exemple :</h4>
+<pre class=" language-html"><code class="prism  language-html"><span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fr<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>width=device-width, initial-scale=1.0<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Manipulation du DOM<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>titre<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Titre original<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>bouton<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Changer le titre<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript">
+        <span class="token comment">// Sélectionne les éléments HTML</span>
+        <span class="token keyword">let</span> titre <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"titre"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">let</span> bouton <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"bouton"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// Ajoute un événement au bouton</span>
+        bouton<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            titre<span class="token punctuation">.</span>textContent <span class="token operator">=</span> <span class="token string">"Titre modifié par JavaScript !"</span><span class="token punctuation">;</span> <span class="token comment">// Change le texte du titre</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<h4 id="exercice-pratique--8"><strong>Exercice pratique :</strong></h4>
+<ol>
+<li>Créez une page HTML avec un titre  <code>&lt;h1&gt;</code>  et un bouton  <code>&lt;button&gt;</code>.</li>
+<li>Ajoutez un script pour changer le texte du titre lorsque vous cliquez sur le bouton.</li>
+</ol>
+<h2 id="chapitre-7--les-tableaux-arrays"><strong>Chapitre 7 : Les tableaux (Arrays)</strong></h2>
+<h3 id="quest-ce-quun-tableau-"><strong>7.1 Qu’est-ce qu’un tableau ?</strong></h3>
+<h4 id="théorie--12">Théorie :</h4>
+<ul>
+<li>Un  <strong>tableau</strong>  est une structure de données qui permet de stocker plusieurs valeurs dans une seule variable.</li>
+<li>Les valeurs dans un tableau sont appelées  <strong>éléments</strong>  et sont accessibles via leur  <strong>index</strong>  (commençant à 0).</li>
+</ul>
+<h4 id="exemple--12">Exemple :</h4>
+<pre class=" language-js"><code class="prism  language-js"><span class="token comment">// Déclaration d'un tableau</span>
+<span class="token keyword">let</span> fruits <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"Pomme"</span><span class="token punctuation">,</span> <span class="token string">"Banane"</span><span class="token punctuation">,</span> <span class="token string">"Orange"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Accéder aux éléments du tableau</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>fruits<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Affiche "Pomme"</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>fruits<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Affiche "Banane"</span>
+
+<span class="token comment">// Ajouter un élément au tableau</span>
+fruits<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">"Mangue"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>fruits<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// ["Pomme", "Banane", "Orange", "Mangue"]</span>
+
+<span class="token comment">// Supprimer le dernier élément</span>
+fruits<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>fruits<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// ["Pomme", "Banane", "Orange"]</span>
+</code></pre>
+<h4 id="exercice-pratique--9"><strong>Exercice pratique :</strong></h4>
+<ol>
+<li>Créez un tableau nommé  <code>animaux</code>  contenant trois noms d’animaux.</li>
+<li>Ajoutez un nouvel animal à la fin du tableau.</li>
+<li>Supprimez le premier élément du tableau.</li>
+<li>Affichez le tableau final dans la console.</li>
+</ol>
+<hr>
+<h2 id="chapitre-8--les-objets"><strong>Chapitre 8 : Les objets</strong></h2>
+<h3 id="quest-ce-quun-objet-"><strong>8.1 Qu’est-ce qu’un objet ?</strong></h3>
+<h4 id="théorie--13">Théorie :</h4>
+<ul>
+<li>Un  <strong>objet</strong>  est une collection de propriétés, où chaque propriété est une paire clé-valeur.</li>
+<li>Les objets permettent de regrouper des données et des fonctions liées.</li>
+</ul>
+<h4 id="exemple--13">Exemple :</h4>
+<pre class=" language-js"><code class="prism  language-js"><span class="token comment">// Déclaration d'un objet</span>
+<span class="token keyword">let</span> personne <span class="token operator">=</span> <span class="token punctuation">{</span>
+    nom<span class="token punctuation">:</span> <span class="token string">"Alice"</span><span class="token punctuation">,</span>
+    age<span class="token punctuation">:</span> <span class="token number">25</span><span class="token punctuation">,</span>
+    estEtudiant<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    saluer<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Bonjour, je m'appelle "</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>nom<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Accéder aux propriétés</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>personne<span class="token punctuation">.</span>nom<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Affiche "Alice"</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>personne<span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Affiche 25</span>
+
+<span class="token comment">// Appeler une méthode</span>
+personne<span class="token punctuation">.</span><span class="token function">saluer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Affiche "Bonjour, je m'appelle Alice"</span>
+</code></pre>
+<h4 id="exercice-pratique--10"><strong>Exercice pratique :</strong></h4>
+<ol>
+<li>Créez un objet nommé  <code>voiture</code>  avec les propriétés suivantes :
+<ul>
+<li><code>marque</code>  : une chaîne de caractères.</li>
+<li><code>modele</code>  : une chaîne de caractères.</li>
+<li><code>annee</code>  : un nombre.</li>
+<li><code>demarrer</code>  : une méthode qui affiche “La voiture démarre”.</li>
+</ul>
+</li>
+<li>Affichez les propriétés de l’objet dans la console.</li>
+<li>Appelez la méthode  <code>demarrer</code>.</li>
+</ol>
+<hr>
+<h2 id="chapitre-9--les-événements"><strong>Chapitre 9 : Les événements</strong></h2>
+<h3 id="quest-ce-quun-événement-"><strong>9.1 Qu’est-ce qu’un événement ?</strong></h3>
+<h4 id="théorie--14">Théorie :</h4>
+<ul>
+<li>Un  <strong>événement</strong>  est une interaction de l’utilisateur avec la page (clic, saisie, survol, etc.).</li>
+<li>On peut écouter ces événements avec la méthode  <code>addEventListener</code>.</li>
+</ul>
+<h4 id="exemple--14">Exemple :</h4>
+<pre class=" language-html"><code class="prism  language-html"><span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fr<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>width=device-width, initial-scale=1.0<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Événements<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>monBouton<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Cliquez-moi<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript">
+        <span class="token comment">// Sélectionner le bouton</span>
+        <span class="token keyword">let</span> bouton <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"monBouton"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// Ajouter un événement de clic</span>
+        bouton<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Bouton cliqué !"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<h4 id="exercice-pratique--11"><strong>Exercice pratique :</strong></h4>
+<ol>
+<li>Créez une page HTML avec un bouton  <code>&lt;button&gt;</code>  et un champ de texte  <code>&lt;input&gt;</code>.</li>
+<li>Ajoutez un événement  <code>click</code>  au bouton pour afficher un message dans la console.</li>
+<li>Ajoutez un événement  <code>input</code>  au champ de texte pour afficher la valeur saisie dans la console.</li>
+</ol>
+<hr>
+<h2 id="chapitre-10--exercice-global"><strong>Chapitre 10 : Exercice global</strong></h2>
+<h3 id="objectif-"><strong>Objectif :</strong></h3>
+<p>Créer une petite application interactive qui combine tout ce que nous avons appris.</p>
+<h3 id="instructions-"><strong>Instructions :</strong></h3>
+<ol>
+<li>
+<p>Créez une page HTML avec les éléments suivants :</p>
+<ul>
+<li>Un titre  <code>&lt;h1&gt;</code>  qui affiche “Gestionnaire de tâches”.</li>
+<li>Un champ de texte  <code>&lt;input&gt;</code>  pour saisir une tâche.</li>
+<li>Un bouton  <code>&lt;button&gt;</code>  pour ajouter la tâche.</li>
+<li>Une liste  <code>&lt;ul&gt;</code>  pour afficher les tâches.</li>
+</ul>
+</li>
+<li>
+<p>Ajoutez un script JavaScript pour :</p>
+<ul>
+<li>Ajouter une tâche à la liste lorsque l’utilisateur clique sur le bouton.</li>
+<li>Supprimer une tâche de la liste lorsque l’utilisateur clique dessus.</li>
+</ul>
+</li>
+</ol>
+<h3 id="code-attendu-"><strong>Code attendu :</strong></h3>
+<p>Voici un exemple de ce que vous pourriez écrire :</p>
+<pre class=" language-html"><code class="prism  language-html"><span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fr<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>width=device-width, initial-scale=1.0<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Gestionnaire de tâches<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>Gestionnaire de tâches<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>tacheInput<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Entrez une tâche<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ajouterBouton<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Ajouter<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>listeTaches<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript">
+        <span class="token comment">// Sélectionner les éléments HTML</span>
+        <span class="token keyword">let</span> input <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"tacheInput"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">let</span> bouton <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"ajouterBouton"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">let</span> liste <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"listeTaches"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// Ajouter une tâche</span>
+        bouton<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">let</span> tache <span class="token operator">=</span> input<span class="token punctuation">.</span>value<span class="token punctuation">;</span> <span class="token comment">// Récupérer la valeur du champ</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>tache <span class="token operator">!==</span> <span class="token string">""</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">let</span> li <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">"li"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Créer un nouvel élément &lt;li&gt;</span>
+                li<span class="token punctuation">.</span>textContent <span class="token operator">=</span> tache<span class="token punctuation">;</span> <span class="token comment">// Ajouter le texte de la tâche</span>
+                liste<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Ajouter l'élément à la liste</span>
+
+                <span class="token comment">// Ajouter un événement pour supprimer la tâche</span>
+                li<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    liste<span class="token punctuation">.</span><span class="token function">removeChild</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Supprimer la tâche</span>
+                <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+                input<span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span> <span class="token comment">// Réinitialiser le champ de texte</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<h3 id="ce-que-vous-avez-révisé-"><strong>Ce que vous avez révisé :</strong></h3>
+<ol>
+<li><strong>HTML et DOM</strong>  : Création et manipulation d’éléments HTML.</li>
+<li><strong>Variables</strong>  : Stocker et utiliser des données.</li>
+<li><strong>Conditions</strong>  : Vérifier si une tâche est vide avant de l’ajouter.</li>
+<li><strong>Boucles</strong>  : (Implicite dans la gestion des tâches via les événements).</li>
+<li><strong>Fonctions</strong>  : Utilisation de fonctions anonymes pour les événements.</li>
+<li><strong>Tableaux et Objets</strong>  : (Peuvent être ajoutés pour gérer les tâches de manière plus avancée).</li>
 </ol>
 
     </div>
