@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapitre 1 &amp; 2 | Introduction à JavaScript</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="cours-de-javascript-pour-débutants-2025"><strong>Cours de JavaScript pour Débutants (2025)</strong></h1>
+<h2 id="chapitre-1--introduction-à-javascript"><strong>Chapitre 1 : Introduction à JavaScript</strong></h2>
+<h3 id="quest-ce-que-javascript-"><strong>1.1 Qu’est-ce que JavaScript ?</strong></h3>
+<ul>
+<li>JavaScript est un langage de programmation qui permet de rendre les pages web interactives.</li>
+<li>Il est exécuté directement dans le navigateur (comme Chrome, Firefox, Edge).</li>
+<li>Il est utilisé pour :
+<ul>
+<li>Ajouter des animations.</li>
+<li>Réagir aux actions de l’utilisateur (clics, saisies, etc.).</li>
+<li>Manipuler le contenu HTML et CSS.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="où-écrire-du-javascript-"><strong>1.2 Où écrire du JavaScript ?</strong></h3>
+<h4 id="théorie-">Théorie :</h4>
+<ul>
+<li>JavaScript peut être écrit directement dans un fichier HTML ou dans un fichier séparé avec l’extension  <code>.js</code>.</li>
+<li>Pour inclure JavaScript dans une page HTML, on utilise la balise  <code>&lt;script&gt;</code>.</li>
+</ul>
+<h4 id="exemple-">Exemple :</h4>
+<p>Voici un exemple simple où JavaScript est inclus directement dans une page HTML.</p>
+<pre class=" language-html"><code class="prism  language-html"><span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fr<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>width=device-width, initial-scale=1.0<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Premier Script JS<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>Bienvenue dans le monde de JavaScript !<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token comment">&lt;!-- Balise script : permet d'écrire du code JavaScript --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript">
+        <span class="token comment">// Affiche un message dans la console du navigateur</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Bonjour, JavaScript !"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<hr>
+<h4 id="exercice-pratique-"><strong>Exercice pratique :</strong></h4>
+<ol>
+<li>Ouvrez votre éditeur de texte (comme Visual Studio Code).</li>
+<li>Créez un fichier HTML.</li>
+<li>Écrivez une structure HTML de base (comme dans l’exemple ci-dessus).</li>
+<li>Ajoutez une balise  <code>&lt;script&gt;</code>  dans le  <code>&lt;body&gt;</code>.</li>
+<li>Écrivez un code JavaScript pour afficher un message dans la console avec  <code>console.log()</code>.</li>
+</ol>
+<hr>
+<h3 id="inclure-un-fichier-javascript-externe"><strong>1.3 Inclure un fichier JavaScript externe</strong></h3>
+<h4 id="théorie--1">Théorie :</h4>
+<ul>
+<li>Pour mieux organiser le code, il est recommandé d’écrire JavaScript dans un fichier séparé.</li>
+<li>On inclut ce fichier dans le HTML avec l’attribut  <code>src</code>  de la balise  <code>&lt;script&gt;</code>.</li>
+</ul>
+<h4 id="exemple--1">Exemple :</h4>
+<ol>
+<li>Créez un fichier nommé  <code>script.js</code>  et écrivez le code suivant :</li>
+</ol>
+<pre class=" language-js"><code class="prism  language-js"><span class="token comment">//Affiche un message dans la console</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Bonjour depuis un fichier externe !"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<ol start="2">
+<li>Dans votre fichier HTML, incluez ce fichier avec la balise  <code>&lt;script&gt;</code>  :</li>
+</ol>
+<pre class=" language-html"><code class="prism  language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span>  <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>script.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<h4 id="exercice-pratique--1"><strong>Exercice pratique :</strong></h4>
+<ol>
+<li>Créez un fichier JavaScript nommé  <code>script.js</code>.</li>
+<li>Écrivez un code JavaScript pour afficher un message dans la console.</li>
+<li>Dans votre fichier HTML, incluez ce fichier avec la balise <code>script</code>.</li>
+</ol>
+<hr>
+<h2 id="chapitre-2--les-bases-de-javascript"><strong>Chapitre 2 : Les bases de JavaScript</strong></h2>
+<h3 id="les-variables"><strong>2.1 Les variables</strong></h3>
+<h4 id="théorie--2">Théorie :</h4>
+<ul>
+<li>Une  <strong>variable</strong>  est un conteneur qui stocke une valeur.</li>
+<li>En JavaScript, on utilise :
+<ul>
+<li><strong><code>let</code></strong>  : Pour déclarer une variable modifiable.</li>
+<li><strong><code>const</code></strong>  : Pour déclarer une variable constante (non modifiable).</li>
+<li><strong><code>var</code></strong>  : Ancienne méthode (à éviter dans les nouveaux projets).</li>
+</ul>
+</li>
+</ul>
+<h4 id="exemple--2">Exemple :</h4>
+<pre class=" language-js"><code class="prism  language-js"><span class="token comment">// Déclaration d'une variable modifiable</span>
+<span class="token keyword">let</span> nom <span class="token operator">=</span> <span class="token string">"Alice"</span><span class="token punctuation">;</span> <span class="token comment">// Chaîne de caractères (String)</span>
+<span class="token keyword">let</span> age <span class="token operator">=</span> <span class="token number">25</span><span class="token punctuation">;</span>      <span class="token comment">// Nombre (Number)</span>
+<span class="token keyword">let</span> estEtudiant <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span> <span class="token comment">// Booléen (Boolean)</span>
+
+<span class="token comment">// Affichage des variables dans la console</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Nom :"</span><span class="token punctuation">,</span> nom<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Âge :"</span><span class="token punctuation">,</span> age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Est étudiant :"</span><span class="token punctuation">,</span> estEtudiant<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h4 id="exercice-pratique--2"><strong>Exercice pratique :</strong></h4>
+<ol>
+<li>Créez un fichier JavaScript.</li>
+<li>Déclarez trois variables :
+<ul>
+<li>Une variable pour votre nom (type String).</li>
+<li>Une variable pour votre âge (type Number).</li>
+<li>Une variable pour indiquer si vous êtes débutant en JavaScript (type Boolean).</li>
+</ul>
+</li>
+<li>Affichez ces variables dans la console avec  <code>console.log()</code>.</li>
+</ol>
+<h3 id="les-types-de-données"><strong>2.2 Les types de données</strong></h3>
+<h4 id="théorie--3">Théorie :</h4>
+<ul>
+<li>Les principaux types de données en JavaScript sont :
+<ul>
+<li><strong>String</strong>  : Chaîne de caractères (ex.  <code>"Bonjour"</code>)</li>
+<li><strong>Number</strong>  : Nombre (ex.  <code>42</code>)</li>
+<li><strong>Boolean</strong>  : Vrai ou faux (<code>true</code>  ou  <code>false</code>)</li>
+<li><strong>Null</strong>  : Valeur vide</li>
+<li><strong>Undefined</strong>  : Variable non définie</li>
+</ul>
+</li>
+</ul>
+<h4 id="exemple--3">Exemple :</h4>
+<pre class=" language-js"><code class="prism  language-js"><span class="token keyword">let</span> texte <span class="token operator">=</span> <span class="token string">"Bonjour"</span><span class="token punctuation">;</span> <span class="token comment">// String</span>
+<span class="token keyword">let</span> nombre <span class="token operator">=</span> <span class="token number">42</span><span class="token punctuation">;</span>       <span class="token comment">// Number</span>
+<span class="token keyword">let</span> estVrai <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>    <span class="token comment">// Boolean</span>
+<span class="token keyword">let</span> vide <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>       <span class="token comment">// Null</span>
+<span class="token keyword">let</span> nonDefini<span class="token punctuation">;</span>         <span class="token comment">// Undefined (pas de valeur attribuée)</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>texte<span class="token punctuation">,</span> nombre<span class="token punctuation">,</span> estVrai<span class="token punctuation">,</span> vide<span class="token punctuation">,</span> nonDefini<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h4 id="exercice-pratique--3"><strong>Exercice pratique :</strong></h4>
+<ol>
+<li>Créez une variable pour chaque type de donnée mentionné ci-dessus.</li>
+<li>Affichez-les dans la console avec  <code>console.log()</code>.</li>
+</ol>
+<hr>
+<h3 id="les-opérations-de-base"><strong>2.3 Les opérations de base</strong></h3>
+<h4 id="théorie--4">Théorie :</h4>
+<ul>
+<li>Les opérateurs permettent de manipuler les données :
+<ul>
+<li>Addition :  <code>+</code></li>
+<li>Soustraction :  <code>-</code></li>
+<li>Multiplication :  <code>*</code></li>
+<li>Division :  <code>/</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="exemple--4">Exemple :</h4>
+<pre class=" language-js"><code class="prism  language-js"><span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> b <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Addition :"</span><span class="token punctuation">,</span> a <span class="token operator">+</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment">// 15</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Soustraction :"</span><span class="token punctuation">,</span> a <span class="token operator">-</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 5</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Multiplication :"</span><span class="token punctuation">,</span> a <span class="token operator">*</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 50</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Division :"</span><span class="token punctuation">,</span> a <span class="token operator">/</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment">// 2</span>
+</code></pre>
+<h4 id="exercice-pratique--4"><strong>Exercice pratique :</strong></h4>
+<ol>
+<li>Déclarez deux variables  <code>x</code>  et  <code>y</code>  avec des valeurs numériques.</li>
+<li>Calculez leur somme, différence, produit, et quotient.</li>
+<li>Affichez les résultats dans la console.</li>
+</ol>
+</div>
+</body>
+
+</html>
